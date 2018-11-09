@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="tv_gps">GPS</string>
+    <string name="tv_devicename">Device Name:</string>
+</resources>
