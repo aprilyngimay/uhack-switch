@@ -6,9 +6,13 @@ import android.widget.CompoundButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
     private boolean toggleButtonValue = false;
+    private DatabaseReference mDatabase; //variable for Database Reference
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,20 +26,20 @@ class MainActivity extends AppCompatActivity implements CompoundButton.OnChecked
         toggleButtonValue = toggleButton.isChecked();
 
         toggleButton.setOnCheckedChangeListener(this);
+        mDatabase = FirebaseDatabase.getInstance().getReference(); // init Database Ref: rice-e-rrigate-test
     }
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         int id = buttonView.getId();
-        String message = "";
+        int value = 0;
 
         switch (id){
             case R.id.toggle_button:
                 toggleButtonValue = isChecked;
-                message = isChecked ? "Toggle Button is on" : "Toggle Button is off";
+                value = isChecked ? 1 : 0;
                 break;
         }
-
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        mDatabase.child("arduinoDevice").child("switch").setValue(value); // Insert Data to Realtime Database: arduinoDevice/switch=value;
     }
 }

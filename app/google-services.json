@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1000147558036",
+    "firebase_url": "https://rice-e-rrigate-test.firebaseio.com",
+    "project_id": "rice-e-rrigate-test",
+    "storage_bucket": "rice-e-rrigate-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000147558036:android:37d858a0f82db336",
+        "android_client_info": {
+          "package_name": "sti.gimay.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1000147558036-8ii8cb2hv2e8mj0anoukfd83uu84rhal.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBW2LWdv7Nl7mthBYdZz4Jn5kyC_rOYuJ8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
